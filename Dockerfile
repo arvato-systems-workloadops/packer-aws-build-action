@@ -1,4 +1,4 @@
-FROM hashicorp/packer:1.7.3
+FROM hashicorp/packer:1.8.0
 
 LABEL "repository" = "https://github.com/ExitoLab/packer-build-action"
 LABEL "homepage" = "https://github.com/ExitoLab/packer-build-action"
