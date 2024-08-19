@@ -1,4 +1,5 @@
-FROM hashicorp/packer:1.8.0
+FROM hashicorp/packer:latest
+#FROM hashicorp/packer:1.8.0 #1.8.0 works as of 2024-08-19
 
 LABEL "repository" = "https://github.com/ExitoLab/packer-build-action"
 LABEL "homepage" = "https://github.com/ExitoLab/packer-build-action"
