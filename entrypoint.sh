@@ -23,6 +23,13 @@ if [ -f "$INPUT_VARFILE" ]; then
 fi
 
 set +e
+#Run Packer Plugin install
+PACKER_PLUGIN_OUTPUT=$(sh -c "packer plugins install github.com/hashicorp/amazon" 2>&1)
+echo "$PACKER_PLUGIN_OUTPUT"
+echo "Ending running packer plugin install ..."
+set -e
+
+set +e
 # Run Packer validate
 PACKER_VALIDATE_OUTPUT=$(sh -c "packer validate ${variableCommand} ${INPUT_TEMPLATEFILE}" 2>&1)
 echo "$PACKER_VALIDATE_OUTPUT"
